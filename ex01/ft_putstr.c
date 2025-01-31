@@ -14,8 +14,8 @@ int	main()
 {
 	char	*s;
 
-	s = "We are Chinese.";
+	s = "We are Chinese.\n";
 	ft_putstr(s);
-	write(1, "\n", 1);
+
 	return (0);
 }
