@@ -2,7 +2,7 @@
 #include <limits.h>
 void	ft_putnbr(int nb)
 {
-	char	digit;
+	char	c;
 
 	if (nb == INT_MIN)
 	{
@@ -14,10 +14,16 @@ void	ft_putnbr(int nb)
 		write(1, "-", 1);
 		nb = -nb;
 	}
-	if (nb >= 10)
+	if (nb > 9)
+	{
 		ft_putnbr(nb / 10);
-	digit = nb % 10 + '0';
-	write(1, &digit, 1);
+		ft_putnbr(nb % 10);
+	}
+	else
+	{
+		c = nb + '0';
+		write(1, &c, 1);
+	}
 }
 #include <stdlib.h>
 int	main(int argc, char **argv)
