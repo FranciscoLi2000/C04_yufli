@@ -67,7 +67,7 @@ int	ft_atoi_base(char *str, char *base)
 #include <string.h>
 int	main()
 {
-	char	*str = "34D2";
+	char	*str = "2025";
 	char	*base = "0123456789ABCDEF";
 
 	printf("The number %s in the base-%i system is %i(Decimal)\n", str, strlen(base), ft_atoi_base(str, base));
